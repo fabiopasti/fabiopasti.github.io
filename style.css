@@ -1,0 +1,140 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background: #fff;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    padding: 40px;
+    border-right: 1px solid #eee;
+    z-index: 10;
+}
+
+.sidebar h1 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #999;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #000;
+}
+
+/* CONTENT */
+.content {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* HOMEPAGE IMAGE */
+.single-image {
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* PORTFOLIO */
+.albums {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.album {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.album:hover {
+    color: #666;
+}
+
+/* SLIDER */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.active {
+    display: block;
+}
+
+/* BUTTONS */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+button:hover {
+    color: #000;
+}
+
+.prev {
+    left: -60px;
+}
+
+.next {
+    right: -60px;
+}
+
+.album-page h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #555;
+}
